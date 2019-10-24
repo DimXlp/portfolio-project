@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jobs.apps.JobsConfig', #added, adds the Job app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,10 +76,14 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql', # change of db from sqlite to prostgresql
+        'NAME': 'portfoliodb', # change to name of db we just created
+        'USER': 'postgres', # added user
+        'PASSWORD': 'z15DeAc2Astrapilarissas15', # password we entered in the terminal
+        'HOST': 'localhost', # where we can find this db
+        'PORT': '5432', # added port
     }
-}
+} # this is essentially telling django "when you are creating/updating the db, look to this location instead of the sqlite"
 
 
 # Password validation
@@ -117,4 +122,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # added
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # ***folder in which all the media files will be placed
+
+MEDIA_URL = '/media/' # ***url when we click on a file (photo etc) 
