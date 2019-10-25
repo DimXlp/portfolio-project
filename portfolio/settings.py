@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'jobs.apps.JobsConfig', #added, adds the Job app
+    'blog.apps.BlogConfig', # added, adds the Blog app
+    'jobs.apps.JobsConfig', # added, adds the Job app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,4 +127,4 @@ STATIC_URL = '/static/' # added
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # ***folder in which all the media files will be placed
 
-MEDIA_URL = '/media/' # ***url when we click on a file (photo etc) 
+MEDIA_URL = '/media/' # ***url when we click on a file (photo etc)

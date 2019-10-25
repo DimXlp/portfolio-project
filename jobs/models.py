@@ -1,5 +1,5 @@
 """
- This file was created by me.
+ This file was written by me.
  It creates the Job app.
 """
 
