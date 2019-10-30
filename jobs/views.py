@@ -10,5 +10,5 @@ from .models import Job # added 41
 """
 
 def home(request):
-    jobs = Job.objects # added, gets all the jobs from the db and turns them to python objects(?)
+    jobs = Job.objects # added, gets all the jobs from the db and turns them to python objects
     return render(request, 'jobs/home.html', {'jobs': jobs});

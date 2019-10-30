@@ -123,8 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'portfolio/static/'),
+] # added
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # ***folder in which all the staic files will be placed
 STATIC_URL = '/static/' # added
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # ***folder in which all the media files will be placed
-
 MEDIA_URL = '/media/' # ***url when we click on a file (photo etc)
