@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql', # change of db from sqlite to prostgresql
         'NAME': 'portfoliodb', # change to name of db we just created
         'USER': 'postgres', # added user
-        'PASSWORD': 'z15DeAc2Astrapilarissas15', # password we entered in the terminal
+        'PASSWORD': '1THndR15DjangoAc2', # password we entered in the terminal
         'HOST': 'localhost', # where we can find this db
         'PORT': '5432', # added port
     }
